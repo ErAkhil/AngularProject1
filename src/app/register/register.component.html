@@ -1,0 +1,22 @@
+
+
+<div class = "container-1">
+  <div class="nav-menu" style = "display: inline-block;;">
+    <div class = "nav-font">Dev Connector</div>
+    <a routerLink="/NotFound" routerLinkActive="active" class = "top-buttons">Developer</a>
+    <a routerLink="/register" routerLinkActive="active" class = "top-buttons">Register</a>
+    <a routerLink="/login" routerLinkActive="active" class = "top-buttons">Login</a>
+
+    </div>
+
+  <div class ="SignUp">
+    <h1>Sign Up</h1>
+    <h4>Create your account</h4>
+    <input type="text" placeholder="Name" ><br>
+    <input type="email" placeholder="Email Address" ><br>
+    <p>This site uses Gravatar so if you want a profile image, use a Gravatar email</p>
+    <input type="password" placeholder="Password" ><br>
+    <input type="password" placeholder="Confirm Password" ><br>
+    <button type = "submit" class = "main-buttons login" (click)="navigateByURL('/dashboard')">Register</button>
+
+  </div>

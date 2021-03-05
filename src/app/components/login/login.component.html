@@ -1,0 +1,18 @@
+
+<div class = "container-1">
+  <div class="nav-menu" style = "display: inline-block;;">
+    <div class = "nav-font">Dev Connector</div>
+    <a routerLink="/NotFound" routerLinkActive="active" class = "top-buttons">Developer</a>
+    <a routerLink="/register" routerLinkActive="active" class = "top-buttons">Register</a>
+    <a routerLink="/login" routerLinkActive="active" class = "top-buttons">Login</a>
+
+    </div>
+
+  <div class ="SignIn">
+    <h1>Sign In</h1>
+    <h4>Sign into your account</h4>
+    <input type="text" placeholder="username"><br>
+    <input type="password" placeholder="Password"><br>
+    <button type = "submit" class = "main-buttons login" (click)="navigateByURL('/dashboard')">Login</button>
+
+  </div>

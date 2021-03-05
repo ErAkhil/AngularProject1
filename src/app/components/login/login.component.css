@@ -1,0 +1,46 @@
+
+.container-1{
+  background-color: lightgoldenrodyellow;
+}
+
+.nav-font{
+  color:black;
+  font-size: 24px;
+  background-color: white;
+  margin-top:20px;
+  float: left;
+}
+
+.top-buttons{
+  float: right;
+  margin-top:20px;
+  margin-right:5px;
+}
+
+.nav-menu{
+  border:1px solid white;
+  width:100%;
+  height:75px;
+}
+
+.SignIn{
+  width: 100%;
+  height: 650px;
+  text-align: center;
+  margin-top:150px;
+}
+
+.main-buttons{
+  margin-right: 5px;
+}
+
+.login{
+  background-color: gray;
+}
+
+.register{
+  background-color: blue;
+}
+input{
+  margin-bottom: 10px;
+}

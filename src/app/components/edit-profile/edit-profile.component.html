@@ -1,0 +1,72 @@
+<mat-card>
+  <mat-toolbar>Create Your Profile</mat-toolbar>
+  <br>
+  <h3><img src = "../../../assets/person.png" class ="icons">  Let's get some information to make your profile stand out</h3>
+  <form  name='myform' [formGroup]='myform' (ngSubmit)="submit()">
+    <span class="font-description">Give us an idea of where you are at in your career</span><br>
+    <mat-form-field>
+      <mat-select name="designation" placeholder="Select Professional status" formControlName='designation'
+      [ngClass]="{'is-invalid':submitted && val.designation.errors}">
+        <mat-option value='Developer'>Developer</mat-option>
+        <mat-option value='Junior Developer'>Junior Developer</mat-option>
+        <mat-option value='Senior Developer'>Senior Developer</mat-option>
+        <mat-option value='Manager'>Manager</mat-option>
+        <mat-option value='Student or Learning'>Student or Learning</mat-option>
+        <mat-option value='Instructor or Teacher'>Instructor or Teacher</mat-option>
+        <mat-option value='Others'>Others</mat-option>
+      </mat-select>
+
+    </mat-form-field><br>
+
+    <mat-error *ngIf='submitted && val.designation.errors'>
+      <mat-error *ngIf='val.designation.errors?.required'>
+          This field is required
+      </mat-error>
+    </mat-error><br>
+
+    <span class="font-description">Could be your own company or one you work for</span><br>
+    <mat-form-field>
+      <input matInput type="text" name='companyName' placeholder="Company Name" formControlName="companyName"
+      [ngClass]="{'is-invalid': submitted && val.companyName.errors}">
+    </mat-form-field>
+    <mat-error *ngIf="submitted && val.companyName.errors">
+      <mat-error *ngIf=" val.companyName.errors?.required">
+        This field is required
+      </mat-error>
+    </mat-error><br>
+
+    <span class="font-description">Could be your own or a company website</span><br>
+    <mat-form-field>
+      <input matInput type='text' name="website" placeholder="Company Website" formControlName="website"
+      [ngClass]="{'is-invalid': submitted && val.email.errors}">
+    </mat-form-field>
+    <br>
+
+    <span class="font-description">City & state suggested (eg. Boston, MA)</span><br>
+    <mat-form-field>
+      <input matInput type="text" name='city' placeholder="Enter your city" formControlName="city">
+    </mat-form-field>
+         <br>
+
+    <span class="font-description">Please mention your skills (eg. HTML,CSS,JavaScript,PHP)</span><br>
+    <mat-form-field>
+      <input matInput type="text" name="skills" placeholder="Your Skills"
+       formControlName="skills" [ngClass]="{'is-invalid': submitted && val.password.errors}">
+    </mat-form-field>
+    <br>
+
+    <span class="font-description">If you want your latest repos and a Github link, include your username</span><br>
+    <mat-form-field>
+      <input matInput type="text" name="gitUserName" placeholder="GitHub Username"
+       formControlName="gitUserName" [ngClass]="{'is-invalid': submitted && val.cpassword.errors}">
+    </mat-form-field>
+<br>
+      <span class="font-description">Tell us a little about yourself</span><br>
+      <mat-form-field>
+        <input matInput type="textarea" name="bio" placeholder="A short bio of yourself" formControlName="bio">
+      </mat-form-field>
+     <br>
+
+    <pre><button mat-raised-button color='warn' type="submit">Submit</button>   <button mat-raised-button color='warn' type='reset' (click)="onReset()">Reset</button></pre>
+  </form>
+</mat-card>

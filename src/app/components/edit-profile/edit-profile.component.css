@@ -1,0 +1,17 @@
+mat-card{
+  width:80%;
+  margin: auto;
+}
+mat-form-field,input{
+  width:60%;
+  margin:auto;
+}
+.icons{
+  height:15px;
+  width:15px;
+}
+.font-description{
+
+  font-size: x-small;
+  color:lightyellow
+}

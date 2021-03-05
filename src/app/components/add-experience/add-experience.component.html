@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-toolbar>Add Experience</mat-toolbar>
+  <form #myform="ngForm" (ngSubmit)="myform.valid && submit(myform.value)">
+    <mat-form-field>
+      <input matInput type="text" placeholder="*Job Title" name="jobTitle" ngModel required #jobTitle="ngModel"
+      [ngClass]="{'is-invalid': myform.submitted && jobTitle.invalid }">
+    </mat-form-field><br>
+    <mat-error *ngIf="myform.submitted && jobTitle.invalid">
+      <mat-error *ngIf="jobTitle.errors?.required ">
+           This field is required
+      </mat-error>
+    </mat-error>
+        <mat-form-field>
+      <input matInput type="text" placeholder="*Company" name="company" ngModel  required
+      #company="ngModel" [ngClass]="{'is-invalid':myform.submitted }">
+    </mat-form-field><br>
+    <mat-error *ngIf="myform.submitted">
+      <mat-error *ngIf="company.errors?.required">
+        This field is required
+      </mat-error>
+      </mat-error>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Location" name="location" ngModel >
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+      <mat-label>From Date</mat-label>
+      <input matInput [matDatepicker]="fromDate">
+      <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+      <mat-datepicker #fromDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>To date</mat-label>
+      <input matInput [matDatepicker]="toDate">
+      <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+      <mat-datepicker #toDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="textarea" placeholder="Job description" name="jobDesc" ngModel >
+    </mat-form-field><br>
+         <pre><button mat-raised-button type="submit"color='accent' >Submit</button>   <button mat-raised-button type="reset" color='accent'>Reset</button></pre>
+      </form>
+</mat-card>

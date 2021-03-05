@@ -1,0 +1,34 @@
+
+
+<div class = "container-1">
+  <div class="nav-menu" style = "display: inline-block;;">
+    <div class = "nav-font">Dev Connector</div>
+    <!-- <button type = "button" class="top-buttons">Login</button>
+    <button type= "button" class = "top-buttons">SignUp</button> -->
+    <a routerLink="/NotFound" routerLinkActive="active" class = "top-buttons">Developer</a>
+    <a routerLink="/dashboard" routerLinkActive="active" class = "top-buttons">Dashboard</a>
+    <a routerLink="/NotFound" routerLinkActive="active" class = "top-buttons">Logout</a>
+
+
+    </div>
+
+  <div class ="Dashborad">
+    <h1>Dashboard</h1>
+
+    <h3><img src = "../../assets/person.png" class = "icons"> Welcome</h3>
+    <button type="button" class = "buttons-move"(click)="navigateByURL('/editProfile')"><img src="../../assets/profile.png" class = "icons" > Edit Profile</button>
+    <button type="button" class = "buttons-move" (click)="navigateByURL('/addExp')"><img src="../../assets/experience.png" class = "icons" > Experience</button>
+    <button type="button" class = "buttons-move" (click)="navigateByURL('/NotFound')"><img src="../../assets/education.jfif" class = "icons" >Add Education</button>
+
+    <h3> Experience Credentials</h3>
+    <button type="button" class = "buttons-move" >Company</button>
+    <button type="button" class = "buttons-move"> Title</button>
+    <button type="button" class = "buttons-move"> Years</button>
+
+    <h3>Education Credentials</h3>
+    <button type="button" class = "buttons-move"> School</button>
+    <button type="button" class = "buttons-move"> Degree</button>
+    <button type="button" class = "buttons-move">Years</button>
+<br>
+    <button type="submit" class = "buttons-move delete-button"><img src="../../assets/person.png" class="icons">Delete my account</button>
+  </div>
